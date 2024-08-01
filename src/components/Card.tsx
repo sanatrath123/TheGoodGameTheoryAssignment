@@ -22,7 +22,7 @@ const currentDateTime:Array<string> = now.toLocaleString().split(",");
   
     return(
     <motion.div
-      className={`quote-card w-80 rounded-none bg-sky-400 text-gray-100 m-auto min-h-[24rem] font-semibold flex justify-center items-center px-3 relative overflow-hidden  ${expand ? 'h-[35rem] md:w-96 w-full' : 'h-[24rem]'} `}
+      className={`quote-card w-80 rounded-none bg-sky-400 text-gray-100 m-auto min-h-[24rem] font-semibold flex justify-center items-center px-3 relative overflow-hidden  ${expand ? 'h-[35rem] md:w-96 w-full' : 'h-[24.5rem]'} `}
       animate={{
         scale: [1, 2, 2, 1, 1],
         rotate: [0, 0, 270, 270, 0],
@@ -51,7 +51,7 @@ className="text-gray-900 text-lg cursor-pointer border-b-2 border-gray-100">{exp
       </p>
    
 
-      <div className="w-full text-gray-100 text-md font-thin absolute bottom-[4rem] flex justify-between px-2">
+      <div className="w-full text-gray-100 text-md font-thin absolute bottom-[3.6rem] flex justify-between px-2">
       <span className="">{currentDateTime?.[0]}</span>
       <span className="">{currentDateTime?.[1]}</span>
       </div>
