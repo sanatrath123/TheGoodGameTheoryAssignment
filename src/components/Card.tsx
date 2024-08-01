@@ -9,7 +9,7 @@ type CardProps = {
 const Card = ({ quote }: CardProps) => {
 
   const [ expand , setExpand ] = useState<boolean>(false)
-  const textover = quote.length > 50 ? quote.slice(0, 50) + '...' : quote;
+  const textover = quote.length > 150 ? quote.slice(0, 150) + '...' : quote;
   
 const Showmore = ()=>{
   setExpand(!expand)
