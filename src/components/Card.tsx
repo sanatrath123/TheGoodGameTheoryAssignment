@@ -15,9 +15,14 @@ const Showmore = ()=>{
   setExpand(!expand)
 }
 
-  return (
+//time and date
+const now = new Date();
+const currentDateTime:Array<string> = now.toLocaleString().split(",");
+
+  
+    return(
     <motion.div
-      className={`quote-card w-80 rounded-none bg-sky-400 text-gray-100 m-auto min-h-[24rem] font-semibold flex justify-center items-center px-3 relative overflow-hidden  ${expand ? 'h-[35rem] w-96' : 'h-[24rem]'} `}
+      className={`quote-card w-80 rounded-none bg-sky-400 text-gray-100 m-auto min-h-[24rem] font-semibold flex justify-center items-center px-3 relative overflow-hidden  ${expand ? 'h-[35rem] md:w-96 w-full' : 'h-[24rem]'} `}
       animate={{
         scale: [1, 2, 2, 1, 1],
         rotate: [0, 0, 270, 270, 0],
@@ -46,7 +51,10 @@ className="text-gray-900 text-lg cursor-pointer border-b-2 border-gray-100">{exp
       </p>
    
 
-      <span className="text-gray-100 text-md font-thin absolute bottom-[4rem] left-2">Aug 1 2024</span>
+      <div className="w-full text-gray-100 text-md font-thin absolute bottom-[4rem] flex justify-between px-2">
+      <span className="">{currentDateTime?.[0]}</span>
+      <span className="">{currentDateTime?.[1]}</span>
+      </div>
 
       <div className="absolute bottom-0 left-0 h-[3.5rem] border-t-2 border-gray-100 w-full text-2xl font-semibold text-gray-800 flex justify-between px-3 items-center">
         <p className=" text-gray-900 text-xl font-medium">GitHub:</p>
@@ -55,7 +63,8 @@ className="text-gray-900 text-lg cursor-pointer border-b-2 border-gray-100">{exp
   </a>
       </div>
     </motion.div>
-  );
-};
+    ) 
+  }
+;
 
 export default Card;
